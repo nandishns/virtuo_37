@@ -42,7 +42,7 @@ class _LandingPageState extends State<LandingPage> {
         if (state is AuthenticationUnauthenticated) {
           //Should it still go to the landing page ??
           // return const LoginView();
-          return const LoginView();
+          return const LoginViewV2();
         }
 
         // if (state is AuthenticationIntialState) {
@@ -55,16 +55,16 @@ class _LandingPageState extends State<LandingPage> {
 
   Widget initialAppLoading() {
     return Scaffold(
-      backgroundColor: Colors.black,
+      // backgroundColor: Colors.black,
       body: Column(
         children: [
           Expanded(flex: 3, child: Container()),
           Expanded(
             flex: 3,
             child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.2,
+              width: MediaQuery.of(context).size.width * 0.6,
               child: Image.asset(
-                "virtuo_logo.png",
+                "assets/images/virtuo_logo.png",
               ),
             ),
           ),

@@ -7,6 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:logger/logger.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:virtuo/helpers/commonWidgets.dart';
 
 import '../otpVerificationBloc/otpVerificationBloc.dart';
 import '../otpVerificationBloc/otpVerificationEvent.dart';
@@ -63,7 +64,7 @@ class OTPState extends State<OTPView> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Colors.black,
+      // backgroundColor: Colors.black,
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton:
           BlocConsumer<otpVerificationBloc, otpVerificationState>(
@@ -191,24 +192,7 @@ class OTPState extends State<OTPView> {
                   ),
                 );
               }),
-      appBar: AppBar(
-          elevation: 0,
-          titleSpacing: 1,
-          backgroundColor: const Color(0xff1A1A1C),
-          title: Row(
-            children: [
-              SizedBox(
-                width: width / 10,
-              ),
-              const Text(
-                "Virtuo",
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white),
-              ),
-            ],
-          )),
+      appBar: customAppBar("Virtuo", context),
       body: BlocBuilder<otpVerificationBloc, otpVerificationState>(
         bloc: BlocProvider.of<otpVerificationBloc>(context),
         builder: (context, state) {

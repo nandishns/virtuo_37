@@ -16,7 +16,7 @@ class RouteGenerator {
         });
       case Routes.login:
         // return MaterialPageRoute(builder: (_) => const LoginView());
-        return MaterialPageRoute(builder: (_) => const LoginView());
+        return MaterialPageRoute(builder: (_) => const LoginViewV2());
 
       case Routes.otp:
         return MaterialPageRoute(
