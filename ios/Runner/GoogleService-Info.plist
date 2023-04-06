@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>721816280273-csmjgvnjpiu18695mugndp45h8d22103.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.721816280273-csmjgvnjpiu18695mugndp45h8d22103</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDMHkeO_h3TXyf6omj5-piIFpzbc9knTkU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>721816280273</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.virtuo</string>
+	<key>PROJECT_ID</key>
+	<string>virtuo-90db3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>virtuo-90db3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:721816280273:ios:650aab784579cb5c1379f0</string>
+</dict>
+</plist>

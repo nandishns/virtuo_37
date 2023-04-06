@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "721816280273",
+    "project_id": "virtuo-90db3",
+    "storage_bucket": "virtuo-90db3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721816280273:android:6f942232360a25c01379f0",
+        "android_client_info": {
+          "package_name": "com.example.virtuo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721816280273-iq66i0ggd8d4citmqr7ftu4falbbq297.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5yWNtDWtxkeRY01uALxfpmkMfwowf60Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721816280273-iq66i0ggd8d4citmqr7ftu4falbbq297.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
