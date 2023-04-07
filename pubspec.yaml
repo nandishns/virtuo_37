@@ -90,6 +90,7 @@ flutter:
   assets:
      - assets/images/virtuo_logo.png
      - assets/lotties/streak.json
+     - assets/images/virtualLab.jpeg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

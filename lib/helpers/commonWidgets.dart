@@ -211,31 +211,7 @@ Widget menuBar(
               title: Text('My Account', style: drawerItemsTextStyle(height)),
               leading: const Icon(Icons.person, color: Colors.blue),
             )),
-        InkWell(
-            onTap: () {
-              Navigator.pop(context);
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => const AutoPay()),
-              // );
-            },
-            child: ListTile(
-              title: Text('Auto Pay', style: drawerItemsTextStyle(height)),
-              leading: const Icon(Icons.autorenew, color: Colors.blue),
-            )),
-        InkWell(
-            onTap: () {
-              Navigator.pop(context);
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //       builder: (context) => const HomePageReference()),
-              // );
-            },
-            child: ListTile(
-              title: Text('Reference', style: drawerItemsTextStyle(height)),
-              leading: const Icon(Icons.groups, color: Colors.blue),
-            )),
+
         const Divider(),
         // InkWell(
         // onTap: () {
@@ -253,22 +229,7 @@ Widget menuBar(
         //     color: Colors.blue,
         //   ),
         // )),
-        InkWell(
-            onTap: () {
-              Navigator.pop(context);
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => MerchantResource()),
-              // );
-            },
-            child: ListTile(
-              title: Text('Merchant Resource',
-                  style: drawerItemsTextStyle(height)),
-              leading: const Icon(
-                Icons.contacts,
-                color: Colors.blue,
-              ),
-            )),
+
         InkWell(
             onTap: () async {
               // Navigator.pop(context);

@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:virtuo/features/virtualLab.dart';
 
 import '../bloc/appState.dart';
 import '../bloc/states.dart';
@@ -165,31 +166,46 @@ class _VirtuoDashboardState extends State<VirtuoDashboard> {
                         //   return const CircularProgressIndicator();
                         // }
                         if (snapshot.hasData) {
-                          dynamic data = snapshot.data;
+                          dynamic data = snapshot.data as Map;
                           if (data.length == 0) {
                             return Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
+                              children: const [
                                 Center(
                                   child: Text("Loading"),
                                 )
                               ],
                             );
                           }
-                          return Text(
-                            userName,
-                            style: GoogleFonts.lato(
-                              fontSize: height / 40,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
-                            ),
+                          return Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                firstLetterToUpperCase(
+                                    data[NAME_KEY].toString()),
+                                style: GoogleFonts.lato(
+                                  fontSize: height / 38,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              Text(
+                                firstLetterToUpperCase(
+                                    data[SCHOOL_KEY].toString()),
+                                style: GoogleFonts.lato(
+                                  fontSize: height / 52,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ],
                           );
                         }
                         return Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
+                          children: const [
                             Center(child: Text("Loading")),
                           ],
                         );
@@ -386,13 +402,8 @@ class _VirtuoDashboardState extends State<VirtuoDashboard> {
             break;
           case REPORT_DEFAULTER:
             // ignore: use_build_context_synchronously
-            // Navigator.push(
-            //     context,
-            //     MaterialPageRoute(
-            //         builder: ((context) => BlocProvider(
-            //               create: ((context) => SearchUserCubit()),
-            //               child: const AssociationMarkAsFraud(),
-            //             ))));
+            Navigator.push(context,
+                MaterialPageRoute(builder: ((context) => VirtualLabs())));
             break;
           case DEFAULTER_HISTORY:
             // ignore: use_build_context_synchronously
@@ -718,34 +729,34 @@ class _VirtuoDashboardState extends State<VirtuoDashboard> {
   }
 }
 
-Future<dynamic> getUserName() async {
+Future<Map> getUserName() async {
   // isLoading = true;
   try {
-    String currentUserID =
-        FirebaseAuth.instance.currentUser!.uid.toString().toLowerCase();
+    String currentUserID = FirebaseAuth.instance.currentUser!.uid.toString();
+
     QuerySnapshot userName = await FirebaseFirestore.instance
         .collection(USERS_COLLECTION)
         .where(USER_UID_KEY, isEqualTo: currentUserID)
         .get();
     if (userName.docs.isNotEmpty) {
       final userRef = userName.docs.first.data();
-      final username = userRef;
+      final username = userRef as Map;
       if (username != null) {
-        print(username);
+        print(username[NAME_KEY]);
         // do something with the username
         return username;
       } else {
         // handle the case where the userRef map doesn't contain the NAME_KEY
-        return "";
+        return {};
       }
     } else {
       // handle the case where no user was found
-      return "";
+      return {};
     }
 
     // isLoading = false;
   } catch (e) {
     print(e);
-    return "";
+    return {};
   }
 }
