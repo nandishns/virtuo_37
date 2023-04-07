@@ -77,7 +77,7 @@ class _LandingPageState extends State<LandingPage> {
                 Text(
                   "VIRTUO",
                   style: GoogleFonts.openSans(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: MediaQuery.of(context).size.height / 42,
                       fontWeight: FontWeight.bold),
                 ),

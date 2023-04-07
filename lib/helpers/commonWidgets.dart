@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../bloc/userRepository.dart';
+
 Color appBlue() {
   return Colors.blue;
 }
@@ -356,7 +358,9 @@ Widget menuBar(
                       ),
                     ),
                   ),
-                  onPressed: () async {},
+                  onPressed: () async {
+                    UserRepository().signOut(context);
+                  },
                   child: Text("Logout",
                       style: GoogleFonts.openSans(
                           color: Colors.black,

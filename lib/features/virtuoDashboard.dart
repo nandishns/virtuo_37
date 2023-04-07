@@ -1,14 +1,18 @@
 import 'dart:io';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 
 import '../bloc/appState.dart';
 import '../bloc/states.dart';
 import '../helpers/commonWidgets.dart';
 import '../helpers/databaseConstants.dart';
+import 'concepts.dart';
 import 'notificatioj.dart';
 
 class VirtuoDashboard extends StatefulWidget {
@@ -154,14 +158,43 @@ class _VirtuoDashboardState extends State<VirtuoDashboard> {
                     SizedBox(
                       height: height * 0.02,
                     ),
-                    Text(
-                      userName,
-                      style: GoogleFonts.lato(
-                        fontSize: height / 40,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                    )
+                    FutureBuilder(
+                      future: getUserName(),
+                      builder: (context, snapshot) {
+                        // if (snapshot.connectionState == ConnectionState.waiting) {
+                        //   return const CircularProgressIndicator();
+                        // }
+                        if (snapshot.hasData) {
+                          dynamic data = snapshot.data;
+                          if (data.length == 0) {
+                            return Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Center(
+                                  child: Text("Loading"),
+                                )
+                              ],
+                            );
+                          }
+                          return Text(
+                            userName,
+                            style: GoogleFonts.lato(
+                              fontSize: height / 40,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          );
+                        }
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Center(child: Text("Loading")),
+                          ],
+                        );
+                      },
+                    ),
                   ],
                 ),
               ),
@@ -179,19 +212,17 @@ class _VirtuoDashboardState extends State<VirtuoDashboard> {
                       height: height * 0.04,
                     ),
                     SizedBox(
-                      child: AnimatedOpacity(
-                        opacity: 0.5,
-                        duration: const Duration(seconds: 0),
-                        child: Column(
-                          children: [
-                            // SizedBox(
-                            //   height: height * .12,
-                            //   child: Image.asset(
-                            //     "assets/images/virtuo_logo.png",
-                            //   ),
-                            // ),
-                          ],
-                        ),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Lottie.asset("assets/lotties/streak.json",
+                                  height: height * 0.09),
+                              Text("0", style: GoogleFonts.ubuntu(fontSize: 30))
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                     // Text(
@@ -365,10 +396,8 @@ class _VirtuoDashboardState extends State<VirtuoDashboard> {
             break;
           case DEFAULTER_HISTORY:
             // ignore: use_build_context_synchronously
-            // Navigator.push(
-            //     context,
-            //     MaterialPageRoute(
-            //         builder: ((context) => const SelfMarkedFraudReports())));
+            Navigator.push(context,
+                MaterialPageRoute(builder: ((context) => const Concepts())));
             break;
           case PROFILE:
             // Navigator.push(
@@ -686,5 +715,37 @@ class _VirtuoDashboardState extends State<VirtuoDashboard> {
         return alert;
       },
     );
+  }
+}
+
+Future<dynamic> getUserName() async {
+  // isLoading = true;
+  try {
+    String currentUserID =
+        FirebaseAuth.instance.currentUser!.uid.toString().toLowerCase();
+    QuerySnapshot userName = await FirebaseFirestore.instance
+        .collection(USERS_COLLECTION)
+        .where(USER_UID_KEY, isEqualTo: currentUserID)
+        .get();
+    if (userName.docs.isNotEmpty) {
+      final userRef = userName.docs.first.data();
+      final username = userRef;
+      if (username != null) {
+        print(username);
+        // do something with the username
+        return username;
+      } else {
+        // handle the case where the userRef map doesn't contain the NAME_KEY
+        return "";
+      }
+    } else {
+      // handle the case where no user was found
+      return "";
+    }
+
+    // isLoading = false;
+  } catch (e) {
+    print(e);
+    return "";
   }
 }
