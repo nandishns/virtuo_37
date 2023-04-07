@@ -1,5 +1,7 @@
-include ':app'
+include ':app',":unity-classes"
+include ":unityLibrary"
 
+project(":unityLibrary").projectDir = file("./unityLibrary")
 def localPropertiesFile = new File(rootProject.projectDir, "local.properties")
 def properties = new Properties()
 
