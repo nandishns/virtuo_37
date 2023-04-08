@@ -8,3 +8,12 @@ Traditional teaching methods often rely on lectures, textbooks, and static image
 ## Our Solution
 * Our platform will make use of the latest technologies like Virtual Reality (VR), 3D modelling of objects and Flutter (Android,iOS and Web) for effective learning with fun.
 * Virtual Reality Labs: The platform will provide a virtual reality laboratory simulation environment for students to perform experiments in a safe and controlled environment. The VR labs will provide interactive experiments, such as flame test of metal salts, measuring the properties of gases, determining the density of liquids, and testing the effects of various substances on plant growth.
+
+
+### Demonstartion of 3D models in our application
+
+* DNA Model </br>
+![DNA MODEL](https://user-images.githubusercontent.com/83031327/230737856-ee557ae1-fba6-4746-9515-ae28f72ba6f8.gif)
+
+* Heart Model </br>
+![HEART MODEL](https://user-images.githubusercontent.com/83031327/230737971-bf4d0046-1730-4ff3-a591-4cb8eb8e12b0.gif)
