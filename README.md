@@ -24,14 +24,16 @@ uraged, leading to lower academic achievement and reduced interest in pursuing S
 
 * DNA Model </br>
 <!-- ![DNA MODEL](https://user-images.githubusercontent.com/92267208/230756760-ed17be56-498b-467c-a583-af47e8d2d44c.mp4) -->
+![APP DEMO](https://user-images.githubusercontent.com/83031327/230760322-4b5352d2-8544-41d5-b314-a0407d4a9140.gif)
 
-https://user-images.githubusercontent.com/92267208/230756760-ed17be56-498b-467c-a583-af47e8d2d44c.mp4
-
-* VR Lab </br>
-https://user-images.githubusercontent.com/64589324/230759574-c836a18f-fa0d-49d3-a062-c3ed74f6ae9d.mp4
+<!-- https://user-images.githubusercontent.com/92267208/230756760-ed17be56-498b-467c-a583-af47e8d2d44c.mp4 -->
 
 * Heart Model </br>
 ![HEART MODEL](https://user-images.githubusercontent.com/83031327/230737971-bf4d0046-1730-4ff3-a591-4cb8eb8e12b0.gif)
+
+### Demonstartion of VR Lab Science Experiments
+
+https://user-images.githubusercontent.com/64589324/230759574-c836a18f-fa0d-49d3-a062-c3ed74f6ae9d.mp4
 
 ### Tech Stack
 * Unity Engine for VR , 3D models
@@ -48,4 +50,6 @@ https://user-images.githubusercontent.com/64589324/230759574-c836a18f-fa0d-49d3-
 * Subscription Model : Schools, homeschooling families, and individual students can subscribe to the platform on a monthly or annual basis. 
 * Pay-Per-Use Model : Individual students can pay for access to specific lessons or simulations on a one-time basis.
 
-### Our Targeted audiences are from the age of 6 years to 25 years.
+- - - -
+
+#### Our Targeted audiences are from the age of 6 years to 25 years.
