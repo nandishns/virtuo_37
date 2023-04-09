@@ -1,6 +1,8 @@
 # VIRTUO!
 
-https://user-images.githubusercontent.com/92267208/230757131-f544a39a-0625-4777-8bb5-f2c53af2c8c9.jpg
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/92267208/230757395-ee45f0ba-9e81-4c87-b5a8-50b509ad65cb.png" width="200" height="150">
+</p>
 
 
 
