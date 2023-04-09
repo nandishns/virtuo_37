@@ -1,4 +1,4 @@
-# VIRTUO!
+# VIRTUO
 
 <p align="center">
  <img src="https://user-images.githubusercontent.com/92267208/230757395-ee45f0ba-9e81-4c87-b5a8-50b509ad65cb.png" width="200" height="150">
