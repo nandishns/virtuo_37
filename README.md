@@ -2,6 +2,8 @@
 
 This repository consists the source code for Flutter application developed by our team as a part of **dotslash 4.0** hackathon.
 
+[Click Here](https://drive.google.com/file/d/1V-4JRpDXgTkzZ_SRWN9CYwaCmk0WwzEM/view?usp=sharing) to the download the APK file.
+
 ## Problem Statement
 Traditional teaching methods often rely on lectures, textbooks, and static images, which may not fully capture the dynamic and interactive nature of science. As a result, students may become disinterested or discouraged, leading to lower academic achievement and reduced interest in pursuing STEM careers. Therefore, there is a need for innovative educational tools and technologies that can improve learning productivity and engagement in STEM subjects, particularly in the areas of virtual reality and interactive experiments. Aditionally, we should also minimize distraction caused by mobile phones among students while studying and help them maintain focus and concentration to improve their academic performance.
 
