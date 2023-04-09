@@ -15,7 +15,11 @@ Traditional teaching methods often rely on lectures, textbooks, and static image
 ### Demonstartion of 3D models in our application
 
 * DNA Model </br>
-![DNA MODEL](https://user-images.githubusercontent.com/83031327/230737856-ee557ae1-fba6-4746-9515-ae28f72ba6f8.gif)
+![DNA MODEL](https://user-images.githubusercontent.com/92267208/230756760-ed17be56-498b-467c-a583-af47e8d2d44c.mp4)
 
 * Heart Model </br>
 ![HEART MODEL](https://user-images.githubusercontent.com/83031327/230737971-bf4d0046-1730-4ff3-a591-4cb8eb8e12b0.gif)
+
+
+
+
