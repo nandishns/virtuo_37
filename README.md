@@ -17,6 +17,8 @@ Traditional teaching methods often rely on lectures, textbooks, and static image
 * DNA Model </br>
 ![DNA MODEL](https://user-images.githubusercontent.com/92267208/230756760-ed17be56-498b-467c-a583-af47e8d2d44c.mp4)
 
+https://user-images.githubusercontent.com/92267208/230756760-ed17be56-498b-467c-a583-af47e8d2d44c.mp4
+
 * Heart Model </br>
 ![HEART MODEL](https://user-images.githubusercontent.com/83031327/230737971-bf4d0046-1730-4ff3-a591-4cb8eb8e12b0.gif)
 
