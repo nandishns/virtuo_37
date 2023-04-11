@@ -40,15 +40,3 @@ https://user-images.githubusercontent.com/64589324/230759574-c836a18f-fa0d-49d3-
 * APIs 
 * Web Scraping for availing the contents from various Govt. TextBooks like NCERT
 
-## Business Model
-
-### Our USP (Unique Selling Point):
-* The unique selling point of the proposed solution is its ability to provide an engaging and interactive learning experience using virtual reality and interactive experiments. By incorporating virtual reality lab simulations into STEM lessons, the platform offers a hands-on learning experience that reinforces concepts learned in the course materials. Additionally, the platform's gamified quizzes and streaks system provide a competitive edge, motivating students to learn and encouraging them to pursue STEM careers. This approach not only improves learning productivity and engagement but also helps to bridge the gap between traditional teaching methods and modern technological advancements in education.
-
-### Revenue Model :
-* Subscription Model : Schools, homeschooling families, and individual students can subscribe to the platform on a monthly or annual basis. 
-* Pay-Per-Use Model : Individual students can pay for access to specific lessons or simulations on a one-time basis.
-
-- - - -
-
-#### Our Targeted audiences are from the age of 6 years to 25 years.
